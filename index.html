@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kodmodo - Software Development and Consulting Agency</title>
+		<!-- Tailwind CSS (CDN) -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- Primary SEO -->
+		<meta
+			name="description"
+			content="Kodmodo is a software development and consulting agency delivering solutions with a focus on quality, performance, and user experience."
+		/>
+		<meta name="author" content="Kodmodo" />
+		<link rel="canonical" href="https://kodomodo.com/" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content="Kodmodo - Software Development and Consulting Agency"
+		/>
+		<meta
+			property="og:description"
+			content="Kodmodo is a software development and consulting agency delivering solutions with a focus on quality, performance, and user experience."
+		/>
+		<meta property="og:url" content="https://kodomodo.com/" />
+		<meta property="og:image" content="https://kodomodo.com/og-image.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Kodmodo brand graphic" />
+		<meta property="og:site_name" content="Kodmodo" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Kodmodo - Software Development and Consulting Agency"
+		/>
+		<meta
+			name="twitter:description"
+			content="Kodmodo is a software development and consulting agency delivering solutions with a focus on quality, performance, and user experience."
+		/>
+		<meta name="twitter:image" content="https://kodomodo.com/og-image.jpg" />
+		<meta name="twitter:image:alt" content="Kodmodo brand graphic" />
+
+		<!-- Favicon & App Icons -->
+		<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/favicon-16x16.png"
+		/>
+		<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+		<link rel="manifest" href="/assets/site.webmanifest" />
+		<meta name="theme-color" content="#0ea5e9" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Kodmodo",
+				"url": "https://kodomodo.com/",
+				"logo": "https://kodomodo.com/logo.png",
+				"description": "Kodmodo is a software development and consulting agency delivering solutions with a focus on quality, performance, and user experience.",
+				"email": "admin@kodomodo.com",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"email": "admin@kodomodo.com",
+						"contactType": "customer support",
+						"availableLanguage": ["en"]
+					}
+				],
+				"sameAs": []
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Kodmodo",
+				"url": "https://kodomodo.com/",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://kodomodo.com/?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
+
+		<style>
+			.text-brand {
+				font-family: "Host Grotesk", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: bold;
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section
+				id="coming-soon"
+				class="flex items-center justify-center min-h-screen flex items-center p-12"
+			>
+				<div class="flex flex-col gap-4 max-w-xs" data-stagger-root>
+					<div class="flex md:flex-row flex-col md:items-end gap-2">
+						<h1
+							class="text-4xl font-bold text-brand opacity-0 translate-y-2 transition-all duration-700 ease-out stagger-item"
+						>
+							Kodmodo.
+						</h1>
+						<p
+							class="opacity-0 translate-y-2 transition-all duration-700 ease-out stagger-item"
+						>
+							/koʊd-moʊ-doʊ/
+						</p>
+					</div>
+					<p
+						class="text-gray-600 opacity-0 translate-y-2 transition-all duration-700 ease-out stagger-item"
+					>
+						We do the <b>geeky</b> things to scale up your business while you
+						make <b>more profit.</b>
+					</p>
+					<a
+						class="bg-black text-white px-4 py-2 font-semibold w-max opacity-0 translate-y-2 transition-all duration-700 ease-out stagger-item"
+						href="mailto:admin@kodomodo.com"
+						>Let's Connect</a
+					>
+				</div>
+			</section>
+		</main>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const root = document.querySelector("[data-stagger-root]");
+				if (!root) return;
+				const items = Array.from(root.querySelectorAll(".stagger-item"));
+				if (!items.length) return;
+				const prefersReduced =
+					window.matchMedia &&
+					window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+				if (prefersReduced) {
+					items.forEach((el) => {
+						el.classList.remove("opacity-0", "translate-y-2");
+					});
+					return;
+				}
+				const baseDelayMs = 300;
+				items.forEach((el, index) => {
+					const delay = index * baseDelayMs;
+					setTimeout(() => {
+						el.classList.remove("opacity-0", "translate-y-2");
+					}, delay);
+				});
+			});
+		</script>
+	</body>
+</html>
